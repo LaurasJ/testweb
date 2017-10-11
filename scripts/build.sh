@@ -1,1 +1,2 @@
- docker build -t laurastestgo .
+#!/bin/bash
+docker build -t laurastestgo .
