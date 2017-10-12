@@ -1,2 +1,5 @@
 #!/bin/bash
-docker build -t laurastestgo testweb
+pwd
+echo $USER
+docker images
+#docker build -t laurastestgo testweb
