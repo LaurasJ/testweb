@@ -1,0 +1,14 @@
+mypipe:
+  name: Lauro-pipeline
+  group: defaultGroup
+  materials:
+    mygit:
+      git: https://github.com/LaurasJ/testweb.git
+  stages:
+    - laurosrepisyaml:
+        jobs:
+          laurojobisyaml:
+            tasks:
+             - exec:
+                 command: ./test.sh
+                 working_directory: testweb/scripts
