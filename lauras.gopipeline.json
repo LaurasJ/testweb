@@ -1,0 +1,41 @@
+{
+ "group": "defaultGroup",
+ "name": "lauraspipeline",
+ "label_template": "lauras-${COUNT}",
+ "enable_pipeline_locking": true,
+ "tracking_tool": null,
+ "environment_variables": [],
+ "materials": [
+   {
+     "type" : "git",
+     "attributes" : {
+       "name" : "Lauras-git",
+       "url" : "https://github.com/LaurasJ/testweb.git"
+     }
+
+   }
+ ],
+ "stages": [
+   {
+     "name" : "JSON_stage",
+     "fetch_materials" : true,
+     "clean_working_directory" : false,
+     "jobs": [
+       {
+         "name" : "lauras_json_job",
+         "run_instance_count" : null,
+         "tasks" : [
+           {
+             "type" : "exec",
+             "attributes" : {
+               "run_if" : ["any"],
+               "command" : "./test.sh",
+               "working_directory" : "testweb/scripts"
+             }
+           }
+         ]
+       }
+     ]
+   }
+ ]
+}
