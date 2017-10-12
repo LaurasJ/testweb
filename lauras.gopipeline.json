@@ -24,11 +24,9 @@
          "tasks" : [
            {
              "type" : "exec",
-             "attributes" : {
-               "run_if" : ["any"],
-               "command" : "./test.sh",
-               "working_directory" : "testweb/scripts"
-             }
+             "run_if" : ["any"],
+             "command" : "./test.sh",
+             "working_directory" : "testweb/scripts"
            }
          ]
        }
