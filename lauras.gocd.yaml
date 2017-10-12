@@ -1,12 +1,12 @@
-mypipe:
-  materials:
-    mygit:
+pipelines:
+  mypipe:
+    materials:
       git: https://github.com/LaurasJ/testweb.git
-  stages:
-    - laurosrepisyaml:
+    stages:
+      - laurosrepisyaml:
         jobs:
           laurojobisyaml:
             tasks:
-             - exec:
-                 command: ./test.sh
-                 working_directory: testweb/scripts
+              - exec:
+                command: ./test.sh
+                working_directory: testweb/scripts
