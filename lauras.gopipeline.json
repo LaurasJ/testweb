@@ -26,7 +26,7 @@
              "type" : "exec",
              "run_if" : "any",
              "command" : "./test.sh",
-             "working_directory" : "testweb/scripts"
+             "working_directory" : "scripts"
            }
          ]
        }
