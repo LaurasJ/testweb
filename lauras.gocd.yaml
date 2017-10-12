@@ -1,4 +1,4 @@
-lauraspipeline:
+mypipe:
   materials:
     mygit:
       git: https://github.com/LaurasJ/testweb.git
