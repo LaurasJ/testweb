@@ -1,6 +1,4 @@
-mypipe:
-  name: Lauro-pipeline
-  group: defaultGroup
+lauraspipeline:
   materials:
     mygit:
       git: https://github.com/LaurasJ/testweb.git
