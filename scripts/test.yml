@@ -1,7 +1,7 @@
 platform: linux
 
 inputs:
-- name: testweb
+- name: myrepo
 
 run:
   path: scripts/test.sh
