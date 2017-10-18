@@ -1,7 +1,4 @@
 platform: linux
 
-inputs:
-- name: myrepo
-
 run:
   path: scripts/test.sh

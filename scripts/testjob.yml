@@ -10,4 +10,4 @@ jobs:
   plan:
   - get : myrepo
   - task : print
-    file : scripts/test.yml
+    file : testweb/scripts/test.yml
