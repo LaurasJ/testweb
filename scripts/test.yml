@@ -1,0 +1,7 @@
+platform: linux
+
+inputs:
+- name: testweb
+
+run:
+  path: testweb/scripts/test.sh
