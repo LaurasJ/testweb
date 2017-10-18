@@ -6,4 +6,4 @@ inputs:
   - name : myrepo
 run:
   path: ls
-  args: [-las]
+  args: [-las myrepo/]
