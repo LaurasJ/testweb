@@ -4,4 +4,4 @@ inputs:
 - name: testweb
 
 run:
-  path: testweb/scripts/test.sh
+  path: scripts/test.sh

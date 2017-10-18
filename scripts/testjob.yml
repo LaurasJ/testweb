@@ -1,16 +1,13 @@
 resources:
-- name: myrepo
-  type: git
+- name : myrepo
+  type : git
   source:
-    uri: https://github.com/LaurasJ/testweb.git
-    branch: master
+    uri : https://github.com/LaurasJ/testweb.git
+    branch : master
 
 jobs:
-  - name : printout
-plan:
+- name : printout
+  plan:
   - get : myrepo
-  - task : print-something
-    config:
-      inputs:
-        - name : myrepo
-      file : /scripts/test.yml
+  - task : print
+    file : scripts/test.yml
