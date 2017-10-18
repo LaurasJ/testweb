@@ -7,7 +7,7 @@ inputs:
 run:
 path: sh
 args:
-  - -exc
-  - |
-    ls -l
-    ls -l myrepo
+- -exc
+- |
+  ls -l
+  ls -l myrepo
