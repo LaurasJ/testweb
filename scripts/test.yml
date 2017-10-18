@@ -5,8 +5,9 @@ image_resource:
 inputs:
   - name : myrepo
 run:
-  path: ls
-  args:
-    - -las
-run:
-  path: pwd
+path: sh
+args:
+  - -exc
+  - |
+    ls -l
+    ls -l myrepo
