@@ -1,0 +1,50 @@
+#!groovy
+
+
+def git_repo = 'github.com/addleeplc/global' // repo url
+// def aws_dev = '54.71.206.189' // dev machine
+// def aws_uat = '35.166.184.252' // uat machine
+def aws_user = 'ubuntu' // aws user
+def scp_dir = 'jenkins-production-builds' // where we place the prod.zip
+def prod_dir = 'www/addison-lee/production/' // nginx /dist folder
+// def app //for docker
+
+
+node{
+    currentBuild.result = "SUCCESS"
+
+    print "INI : POLARIS DEV PIPELINE CONFIG ======================================================================== "
+    print " \t\t\t \u27A1 GIT URL     : ${git_repo}"
+    print " \t\t\t \u27A1 DEPLOY DIR  : /home/ubuntu/${scp_dir}"
+    print " \t\t\t \u27A1 NGINX DIR   : /home/ubuntu/${prod_dir}dist"
+    print "END : POLARIS DEV PIPELINE CONFIG ======================================================================== "
+
+    try {
+			stage ('\u2780 Checkout'){
+				print "===================================================================================================== Checkout code ..."
+				checkout scm
+				print "\u2713 Checkout Success"
+			}
+			stage ('\u2787 Add version'){
+				print "===================================================================================================== Add version ..."
+					sh "echo {\"version\":${env.BUILD_NUMBER}} > version.txt"
+          sh 'cat version.txt'
+          sh 'whoami'
+
+				print "\u2713 Add version Success"
+        }
+      stage ('\u2780 WTF'){
+        print "===================================================================================================== WTF ..."
+        sh "echo WTF is happening???"
+        sh "pwd"
+
+      }
+    }
+    catch (err) {
+        //currentBuild.result = "FAILURE"
+        //    print 'error'
+            echo "\u2717 Success in Pipeline"
+            //notifyFailed()
+        //throw err
+    }
+}
